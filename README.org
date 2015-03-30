@@ -1,0 +1,92 @@
+#+TITLE: Diceware in Manglish
+#+DATE: <2015-03-31 Tue 00:27>
+#+AUTHOR: Tariq Kamal
+#+EMAIL: <github.t-boy@xoxy.net>
+
+* A Diceware list in Manglish
+
+** Diceware?
+
+Yeah, Diceware is this thing you use to generate /really/ good [[http://en.wikipedia.org/wiki/Passphrase][passphrases]]. But seriously, if you want to know more, you can find out [[http://www.diceware.com/][here]].
+
+** Manglish?
+
+Ya, Manglish. Apparently it's an English-based [[http://en.wikipedia.org/wiki/Manglish][creole]] spoken in Malaysia? Aiya, it's like [[http://en.wikipedia.org/wiki/Singlish][Singlish]] lah but, you know, for Malaysians.
+
+I didn't know it was a creole. Really? It just feels strange. Creole. Like, sudah upgrade liddat. Rather than just bad grammar for losers, you know? Not bad lah.
+
+Anyway, the variant I'm doing is primarily more Anglophone and reflects my upbringing (I speak Malay, barely speak Cantonese and Hokkien). I expect actually the composition of the word-list to change as more contributors come in.
+
+** Why la?
+
+Oh, why la? Okay, like this: while the [[http://world.std.com/%7Ereinhold/diceware.wordlist.asc][vanilla Diceware]] list is /okay/ for gomen work, it damn annoying to memorize la. 
+
+I mean, it's got words like =ncaa= (apetu?), =boise= (hah?) and =a&p= (er…), and it always felt awkward and strange to memorize. 
+
+[[http://world.std.com/~reinhold/beale.wordlist.asc][The Beale list]] is actually a little better, but sometimes it trips me up as well (I mean, I don't think =at&t='s ever been a part of my life, and okay, got =abdul= but a lot of the names are gwailo names, and =y'all=? Hahaha no lah no thanks), and you know, I'd like to see =gwailo=, or =cham=, or =kopitiam=, or =yamcha=, or =uols= or some kind of local flavour lah. Why not?
+
+** So it's a little more secure than using Beale or vanilla Diceware?
+
+No lah. If anyone knows you they'll know you'll be using the list from this. Plus the list is public, and the list of items is public, everything also public. I want it to be about the same level of security as vanilla Diceware and Beale Diceware, just… easier to memorise. If you're Malaysian. Of a specific demographic.
+
+That matches mine. Right now.
+
+(shamefaced)
+
+** Ok, ok, I don't need to know. Where are you getting the sources from?
+
+Aha, good question! Some are from the [[http://en.wikipedia.org/wiki/Manglish][Wikipedia]] page itself, which is of course of dubious quality since any loser from the NSA can come in and vandalise kau-kau. But, just for your reference lah, it's [[http://en.wikipedia.org/w/index.php?title=Manglish&oldid=653749952][this snapshot]], okay? Some words I don't use, because I don't recognise (no, seriously. =kapster=? not today lah). That one goes to the =src/wikipedia.asc= list.
+
+** Eh got multiple sources issit?
+
+Yaa. For now lah. One for a list of food & drink (=src/makan.asc=), one for the =lah= equivalents. All sorts lah (=src/suffixes.asc=). The rest that aren't categorised right now goes to =src/dll.asc=. I'll add more as I go along.
+
+** Oh, not finish yet issit?
+
+Yep. The goal here is to hit 7776 words, and based on the [[http://world.std.com/~reinhold/dicewarekit.html][Diceware Kit]] page it suggests I should have a nice list of about 6784 words. That's a tall order, but if I'm aiming for, I dunno… maybe 20% I'll only need about 1356 words or so. The rest I can use a list of [[http://en.wikipedia.org/wiki/Most_common_words_in_English][commonly-used words in English]] or something. Maybe something from Ladybird or some basic reader scheme. Can what, no shame in using that.
+
+** So, the list isn't generated yet. How lah?
+
+Actually, very easy:
+
+1. Write =bash= script to =wget= either the [[http://world.std.com/~reinhold/dicewarekit.txt][diceware kit file]] or the [[http://world.std.com/~reinhold/diceware416.txt][diceware 8K]] list.
+2. put the list together, =sort=, =uniq=, and then use some knit the file using =bash=.
+3. Plonk all the results to =diceware-manglish.asc= in the root directory.
+
+Right now, to check out how many words there are in the list, I use the following:
+
+#+BEGIN_SRC sh :results output
+#! /bin/bash
+
+cat src/*.asc | uniq | wc -l
+#+END_SRC
+
+By rights by the time I figure it out and it comes out okay there'll be a code excerpt in here for you to see and reproduce.
+
+After that I can figure out how to sign it and make it look secure and stuff. Export to PDF also the same. First get the list up.
+
+** Eh, how come you don't include the diceware kit list?
+
+Well, I haven't asked Andrew G. Reinhold, the fella who holds the copyright to Diceware, but releases it for non-commercial distribution, whether he's okay with me including his kit into the repo or not yet. I dunno also if I want to. Takpe lah, it's not big deal for now. Just =wget= the files needed and build it as necessary lah. What's the problem?
+
+** Can contribute words or not?
+
+Can! Just log in an issue first. Don't send email. That email is a spam-trap. I should have notifications of new issues activated.
+
+Candidate words should be more than 3 letters long. The diceware-kit got 2 letter equivalents, so no need. Even my suffixes are liddat, three or more letters.
+
+Anyway, generally arr, the rule is, don't use offensive words. I break it down for you:
+
+- No sexist words. That means nothing about female genitalia, especially those that are used to imply someone's inferiority.
+- No transphobic or homophobic words. I mean it.
+- No racist words. This goes double. No point oso in the end I shut out someone because I put in a word that's hurtful to them, especially if they have to memorise also.
+- No swear words. That's right, in the Wikipedia snapshot got =kanasai= but I don't put in right? Yes. Aiyo, nothing your 10-year old relative should know lah.
+- Use your common sense.
+
+You don't like? Fork. Don't come at me and whine about political correctness. I got no time for you.
+
+** Eh, some of your words I don't think should be in there lah.
+
+Oh, yes arr? Can log an issue and say also or not? I want to know. 
+
+Maybe we can have discussion and see what I can do.

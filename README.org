@@ -39,7 +39,13 @@ Aha, good question! Some are from the [[http://en.wikipedia.org/wiki/Manglish][W
 
 ** Eh got multiple sources issit?
 
-Yaa. For now lah. One for a list of food & drink (=src/makan.asc=), one for the =lah= equivalents. All sorts lah (=src/suffixes.asc=). The rest that aren't categorised right now goes to =src/dll.asc=. I'll add more as I go along.
+Yaa. For now lah. Like this:
+
+- =places.asc= :: place names lah. common ones.
+- =makan.asc= :: food and so on, because, /obviously/.
+- =suffixes.asc= :: three-letter suffixes that are equivalent to the Klang Valley "lah" and East Malaysian "bah"
+- =wikipedia.asc= :: the list I got from the wikipedia snapshot [[http://en.wikipedia.org/w/index.php?title=Manglish&oldid=653749952][here]].
+- =lain-lain.asc= :: anything else that doesn't fit anything else.
 
 ** Oh, not finish yet issit?
 

@@ -33,6 +33,8 @@ That matches mine. Right now.
 
 (shamefaced)
 
+Seriously, come and contribute. This is so =bangsar= it's embarassing.
+
 ** Ok, ok, I don't need to know. Where are you getting the sources from?
 
 Aha, good question! Some are from the [[http://en.wikipedia.org/wiki/Manglish][Wikipedia]] page itself, which is of course of dubious quality since any loser from the NSA can come in and vandalise kau-kau. But, just for your reference lah, it's [[http://en.wikipedia.org/w/index.php?title=Manglish&oldid=653749952][this snapshot]], okay? Some words I don't use, because I don't recognise (no, seriously. =kapster=? not today lah). That one goes to the =src/wikipedia.asc= list.
@@ -59,21 +61,263 @@ Actually, very easy:
 2. put the list together, =sort=, =uniq=, and then use some knit the file using =bash=.
 3. Plonk all the results to =diceware-manglish.asc= in the root directory.
 
-Right now, to check out how many words there are in the list, I use the following:
+Right now, to check out how many words there are in the list, I use the following shell command (I use Debian Linux Jessie).
 
-#+BEGIN_SRC sh :results output
-#! /bin/bash
-
-cat src/*.asc | uniq | wc -l
+#+BEGIN_SRC sh :results output :shebang "#!/bin/bash"
+  cat src/*.asc | uniq | wc -l
 #+END_SRC
 
-By rights by the time I figure it out and it comes out okay there'll be a code excerpt in here for you to see and reproduce.
+#+RESULTS:
+: 238
 
-After that I can figure out how to sign it and make it look secure and stuff. Export to PDF also the same. First get the list up.
+By rights by the time I figure it out and it comes out okay there'll be a code excerpt in here for you to see and reproduce. Right now for a rough list of words, run this on your command line (tested on Debian Linux Jessie):
+
+#+BEGIN_SRC sh :results output :shebang "#!/bin/bash"
+  cat src/*.asc | sort | uniq
+#+END_SRC
+
+#+RESULTS:
+#+begin_example
+abang
+abuden
+action
+adik
+ahbeng
+ahlian
+aiseh
+aiyo
+alamak
+along
+ampang
+arr
+ayam
+bah
+bakuteh
+balaci
+bangsar
+beb
+bedal
+belas
+berak
+beruntong
+bhai
+blur
+bosan
+brader
+bukit
+bunian
+cabut
+cadbury
+canai
+cantas
+cempedak
+cendol
+chakoi
+cham
+chapfan
+charsiew
+chewah
+chop
+cili
+cincai
+cincau
+cirit
+cucuk
+curry
+daa
+daerah
+daging
+dey
+dhal
+die
+dll
+dsb
+dua
+durian
+empat
+enam
+finish
+foochook
+fulamak
+fuyoh
+gaban
+gaduh
+gatal
+gila
+gittew
+gone
+gostan
+habis
+hambat
+hamsap
+hancur
+hantam
+hantu
+hilir
+hoi
+horfun
+hulu
+ipoh
+issit
+itik
+jadi
+jalan
+jampi
+jaya
+jembalang
+jin
+jinjang
+juta
+kacau
+kambing
+kantoi
+kau-kau
+kautim
+kaya
+kedah
+keladi
+kelantan
+kemenyan
+kemuning
+kena
+kencing
+kentut
+kerabu
+kerek
+ketuk
+kiara
+kinabalu
+kolumpo
+koman
+konco-konco
+kopi
+kota
+koyak
+kuala
+kuching
+kuli
+kurma
+kwayteow
+lah
+lain-lain
+langsuir
+lapan
+leh
+lemak
+lempang
+lengchai
+lenglui
+lepuk
+lima
+lontong
+lubuk
+maa
+macha
+machai
+maggi
+mahal
+makan
+makcik
+malas
+malu
+mamak
+mampus
+mangga
+manggis
+mee
+meehoon
+meh
+milo
+minum
+muntah
+murah
+naan
+nangka
+nasi
+negeri
+neslo
+oso
+otak-otak
+outstation
+pahang
+paiseh
+pakcik
+pandan
+pelesit
+penang
+pengsan
+perak
+perlis
+petaling
+pisang
+pokai
+ponteng
+pontian
+pukul
+pulasan
+pulau
+puluh
+rambutan
+rassam
+ratus
+rawang
+rebung
+ribu
+rilek
+rojak
+rosak
+roti
+sagu
+saman
+satu
+sebelas
+segamat
+sei
+selamba
+selat
+sembelih
+sembilan
+sentul
+sepuluh
+seremban
+setan
+siam
+sibeh
+sri
+subang
+sungai
+sup-sup-sui
+susuk
+syok
+tahan
+taikor
+takpe
+tanjung
+tasik
+taufu
+teh
+teluk
+telur
+terror
+tetak
+thamby
+tiga
+tosei
+tujuh
+tumpang
+uols
+vadey
+wahlaueh
+watudu
+wei
+wisma
+yamcha
+yootiau
+#+end_example
 
 ** Eh, how come you don't include the diceware kit list?
 
-Well, I haven't asked Andrew G. Reinhold, the fella who holds the copyright to Diceware, but releases it for non-commercial distribution, whether he's okay with me including his kit into the repo or not yet. I dunno also if I want to. Takpe lah, it's not big deal for now. Just =wget= the files needed and build it as necessary lah. What's the problem?
+Well, I haven't asked Andrew G. Reinhold, the fella who holds the copyright to Diceware, but releases it for non-commercial distribution, whether he's okay with me including his kit into the repo or not yet. I dunno also if I want to. Takpe lah, it's not big deal for now. =wget= the files needed first, build it as necessary lah. Still early days.
 
 ** Can contribute words or not?
 

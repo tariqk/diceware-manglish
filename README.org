@@ -321,7 +321,7 @@ Well, I haven't asked Andrew G. Reinhold, the fella who holds the copyright to D
 
 ** Can contribute words or not?
 
-Can! Just log in an issue first. Don't send email. That email is a spam-trap. I should have notifications of new issues activated.
+Can! Just [[https://github.com/tariqk/diceware-manglish/issues/new][log in an issue first]]. Don't send email. That email is a spam-trap. I should have notifications of new issues activated.
 
 Candidate words should be more than 3 letters long. The diceware-kit got 2 letter equivalents, so no need. Even my suffixes are liddat, three or more letters.
 
@@ -337,6 +337,6 @@ You don't like? Fork. Don't come at me and whine about political correctness. I 
 
 ** Eh, some of your words I don't think should be in there lah.
 
-Oh, yes arr? Can log an issue and say also or not? I want to know. 
+Oh, yes arr? Can [[https://github.com/tariqk/diceware-manglish/issues/new][log an issue]] and say also or not? I want to know. 
 
 Maybe we can have discussion and see what I can do.
